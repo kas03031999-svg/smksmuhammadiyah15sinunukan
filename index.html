@@ -4,15 +4,89 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMKS Muhammadiyah 15 Sinunukan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; }
-    header { background: #0d47a1; color: white; padding: 20px; text-align: center; }
-    nav { background: #1565c0; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    section { padding: 20px; }
-    .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { background: #0d47a1; color: white; text-align: center; padding: 15px; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fb;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #0d47a1, #1976d2);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    nav {
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0d47a1;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #1976d2;
+    }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h2, .card h3 {
+      color: #0d47a1;
+    }
+    footer {
+      background: #0d47a1;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+    .btn {
+      display: inline-block;
+      background: #1976d2;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+    .btn:hover { background: #0d47a1; }
   </style>
 </head>
 <body>
@@ -20,33 +94,38 @@
 <header>
   <h1>SMKS Muhammadiyah 15 Sinunukan</h1>
   <p>Unggul, Islami, dan Berdaya Saing</p>
+  <a href="#ppdb" class="btn">Daftar PPDB</a>
 </header>
 
 <nav>
   <a href="#profil">Profil</a>
   <a href="#visi">Visi & Misi</a>
   <a href="#jurusan">Jurusan</a>
-  <a href="#berita">Berita</a>
+  <a href="#ppdb">PPDB</a>
   <a href="#kontak">Kontak</a>
 </nav>
 
 <section id="profil">
   <div class="card">
     <h2>Profil Sekolah</h2>
-    <p>SMKS Muhammadiyah 15 Sinunukan adalah sekolah menengah kejuruan yang berkomitmen mencetak lulusan unggul, berakhlak Islami, dan siap kerja.</p>
+    <p>SMKS Muhammadiyah 15 Sinunukan adalah sekolah menengah kejuruan yang berkomitmen mencetak lulusan unggul, berakhlak Islami, dan siap kerja sesuai kebutuhan dunia usaha dan industri.</p>
   </div>
 </section>
 
 <section id="visi">
-  <div class="card">
-    <h2>Visi & Misi</h2>
-    <p><strong>Visi:</strong> Mewujudkan siswa beriman, berilmu, dan berakhlak mulia.</p>
-    <p><strong>Misi:</strong></p>
-    <ul>
-      <li>Menyelenggarakan pembelajaran efektif</li>
-      <li>Mengembangkan potensi siswa</li>
-      <li>Menanamkan nilai karakter</li>
-    </ul>
+  <div class="grid">
+    <div class="card">
+      <h3>Visi</h3>
+      <p>Mewujudkan lulusan yang beriman, berilmu, terampil, dan berdaya saing global.</p>
+    </div>
+    <div class="card">
+      <h3>Misi</h3>
+      <ul>
+        <li>Menyelenggarakan pendidikan berbasis keahlian</li>
+        <li>Menanamkan nilai Islami dan karakter</li>
+        <li>Meningkatkan kompetensi sesuai dunia kerja</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -54,29 +133,28 @@
   <div class="card">
     <h2>Kompetensi Keahlian</h2>
     <h3>Akuntansi dan Keuangan Lembaga (AKL)</h3>
-    <p>Program keahlian Akuntansi dan Keuangan Lembaga membekali peserta didik dengan kemampuan mengelola administrasi keuangan, pembukuan, laporan keuangan, perpajakan dasar, serta pengelolaan keuangan lembaga secara profesional.</p>
-    <ul>
-      <li>Akuntansi Dasar dan Lanjutan</li>
-      <li>Komputer Akuntansi</li>
-      <li>Administrasi Keuangan</li>
-      <li>Praktik Kerja Lapangan (PKL)</li>
-    </ul>
+    <p>Program keahlian yang membekali siswa dengan kemampuan akuntansi, administrasi keuangan, komputer akuntansi, dan praktik kerja lapangan.</p>
   </div>
 </section>
 
-<section id="berita">
+<section id="ppdb">
   <div class="card">
-    <h2>Berita Sekolah</h2>
-    <p>📢 Penerimaan Peserta Didik Baru Tahun Ajaran 2025/2026 telah dibuka.</p>
+    <h2>PPDB Online</h2>
+    <p>Pendaftaran Peserta Didik Baru Tahun Ajaran 2025/2026 telah dibuka.</p>
+    <a href="#kontak" class="btn">Hubungi Kami</a>
   </div>
 </section>
 
 <section id="kontak">
-  <div class="card">
-    <h2>Kontak</h2>
-    <p>📍 Alamat: Jl. Pendidikan No. 10</p>
-    <p>📞 Telp: 0812-3456-7890</p>
-    <p>✉️ Email: smpharapanbangsa@gmail.com</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Alamat</h3>
+      <p>Jl. Pendidikan, Sinunukan</p>
+    </div>
+    <div class="card">
+      <h3>Kontak</h3>
+      <p>Email: smksmuhammadiyah15@gmail.com<br>Telp: 08xxxxxxxxxx</p>
+    </div>
   </div>
 </section>
 
