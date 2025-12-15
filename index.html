@@ -7,86 +7,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f5f7fb;
-      color: #333;
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: #f5f7fb; color: #333; }
+    header { background: linear-gradient(135deg, #0d47a1, #1976d2); color: #fff; padding: 90px 20px; text-align: center; }
+    header h1 { font-size: 2.6rem; margin-bottom: 10px; }
+    header p { font-size: 1.1rem; opacity: .9; }
+    nav { background: #fff; display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,.08); position: sticky; top: 0; z-index: 999; }
+    nav a { text-decoration: none; color: #0d47a1; font-weight: 600; }
+    nav a:hover { color: #1976d2; }
+    section { max-width: 1100px; margin: auto; padding: 60px 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 30px; }
+    .card { background: #fff; border-radius: 18px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,.08); }
+    h2,h3 { color: #0d47a1; }
+    footer { background: #0d47a1; color: #fff; text-align: center; padding: 30px 20px; }
+    .btn { display:inline-block; background:#1976d2; color:#fff; padding:12px 26px; border-radius:30px; text-decoration:none; font-weight:600; margin-top:15px; }
+    .btn:hover{ background:#0d47a1; }
+    .date { text-align:center; margin-top:15px; font-size:.9rem; opacity:.9 }
+    /* slideshow */
+    .slideshow { position: relative; overflow: hidden; border-radius: 16px; }
+    .slides { display: flex; animation: slide 18s infinite; }
+    .slides img { width: 100%; flex-shrink: 0; }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(0); }
+      36% { transform: translateX(-100%); }
+      66% { transform: translateX(-100%); }
+      69% { transform: translateX(-200%); }
+      100% { transform: translateX(-200%); }
     }
-    header {
-      background: linear-gradient(135deg, #0d47a1, #1976d2);
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-    nav {
-      background: #ffffff;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      text-decoration: none;
-      color: #0d47a1;
-      font-weight: 600;
-    }
-    nav a:hover {
-      color: #1976d2;
-    }
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card h2, .card h3 {
-      color: #0d47a1;
-    }
-    footer {
-      background: #0d47a1;
-      color: #fff;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
-    }
-    .btn {
-      display: inline-block;
-      background: #1976d2;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      margin-top: 20px;
-      font-weight: 600;
-    }
-    .btn:hover { background: #0d47a1; }
+    iframe { width:100%; border-radius:16px; }
   </style>
 </head>
 <body>
@@ -94,38 +42,34 @@
 <header>
   <h1>SMKS Muhammadiyah 15 Sinunukan</h1>
   <p>Unggul, Islami, dan Berdaya Saing</p>
-  <a href="#ppdb" class="btn">Daftar PPDB</a>
+  <div class="date" id="tanggal"></div>
 </header>
 
 <nav>
   <a href="#profil">Profil</a>
-  <a href="#visi">Visi & Misi</a>
+  <a href="#pengumuman">Pengumuman</a>
   <a href="#jurusan">Jurusan</a>
-  <a href="#ppdb">PPDB</a>
-  <a href="#kontak">Kontak</a>
+  <a href="#erapor">E-Rapor</a>
+  <a href="#galeri">Galeri</a>
+  <a href="#video">Video</a>
+  <a href="#maps">Maps</a>
 </nav>
 
 <section id="profil">
   <div class="card">
     <h2>Profil Sekolah</h2>
-    <p>SMKS Muhammadiyah 15 Sinunukan adalah sekolah menengah kejuruan yang berkomitmen mencetak lulusan unggul, berakhlak Islami, dan siap kerja sesuai kebutuhan dunia usaha dan industri.</p>
+    <p>SMKS Muhammadiyah 15 Sinunukan adalah sekolah menengah kejuruan yang berkomitmen mencetak lulusan unggul, berakhlak Islami, dan siap kerja.</p>
   </div>
 </section>
 
-<section id="visi">
-  <div class="grid">
-    <div class="card">
-      <h3>Visi</h3>
-      <p>Mewujudkan lulusan yang beriman, berilmu, terampil, dan berdaya saing global.</p>
-    </div>
-    <div class="card">
-      <h3>Misi</h3>
-      <ul>
-        <li>Menyelenggarakan pendidikan berbasis keahlian</li>
-        <li>Menanamkan nilai Islami dan karakter</li>
-        <li>Meningkatkan kompetensi sesuai dunia kerja</li>
-      </ul>
-    </div>
+<section id="pengumuman">
+  <div class="card">
+    <h2>📢 Pengumuman</h2>
+    <ul>
+      <li>PPDB Tahun Ajaran 2025/2026 telah dibuka</li>
+      <li>Ujian Akhir Semester Genap bulan Juni 2025</li>
+      <li>Pengambilan Rapor Semester Genap</li>
+    </ul>
   </div>
 </section>
 
@@ -133,34 +77,53 @@
   <div class="card">
     <h2>Kompetensi Keahlian</h2>
     <h3>Akuntansi dan Keuangan Lembaga (AKL)</h3>
-    <p>Program keahlian yang membekali siswa dengan kemampuan akuntansi, administrasi keuangan, komputer akuntansi, dan praktik kerja lapangan.</p>
+    <p>Membekali siswa dengan kemampuan akuntansi, administrasi keuangan, komputer akuntansi, dan PKL.</p>
   </div>
 </section>
 
-<section id="ppdb">
+<section id="erapor">
   <div class="card">
-    <h2>PPDB Online</h2>
-    <p>Pendaftaran Peserta Didik Baru Tahun Ajaran 2025/2026 telah dibuka.</p>
-    <a href="#kontak" class="btn">Hubungi Kami</a>
+    <h2>📘 E-Rapor</h2>
+    <p>Akses nilai siswa melalui sistem E-Rapor.</p>
+    <a href="#" class="btn">Login E-Rapor</a>
   </div>
 </section>
 
-<section id="kontak">
-  <div class="grid">
-    <div class="card">
-      <h3>Alamat</h3>
-      <p>Jl. Pendidikan, Sinunukan</p>
+<section id="galeri">
+  <div class="card">
+    <h2>📸 Galeri Kegiatan</h2>
+    <div class="slideshow">
+      <div class="slides">
+        <img src="https://via.placeholder.com/1100x450?text=Kegiatan+Sekolah+1">
+        <img src="https://via.placeholder.com/1100x450?text=Kegiatan+Sekolah+2">
+        <img src="https://via.placeholder.com/1100x450?text=Kegiatan+Sekolah+3">
+      </div>
     </div>
-    <div class="card">
-      <h3>Kontak</h3>
-      <p>Email: smksmuhammadiyah15@gmail.com<br>Telp: 08xxxxxxxxxx</p>
-    </div>
+  </div>
+</section>
+
+<section id="video">
+  <div class="card">
+    <h2>🎥 Video Sekolah</h2>
+    <iframe height="420" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section id="maps">
+  <div class="card">
+    <h2>📍 Lokasi Sekolah</h2>
+    <iframe height="350" src="https://www.google.com/maps?q=Sinunukan&output=embed"></iframe>
   </div>
 </section>
 
 <footer>
   <p>© 2025 SMKS Muhammadiyah 15 Sinunukan</p>
 </footer>
+
+<script>
+  const tgl = new Date();
+  document.getElementById('tanggal').innerHTML = tgl.toLocaleDateString('id-ID',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+</script>
 
 </body>
 </html>
