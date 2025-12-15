@@ -105,4 +105,183 @@ h2,h3{color:#0d47a1}
 footer{
   background:#0d47a1;
   color:#fff;
-  text-align
+  text-align:center;
+  padding:40px 20px;
+}
+
+iframe{width:100%;border-radius:16px}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-overlay">
+    <h1>SMKS Muhammadiyah 15 Sinunukan</h1>
+    <p>Unggul, Islami, dan Berdaya Saing</p>
+    <p id="tanggal"></p>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#profil">Profil</a>
+  <a href="#pengumuman">Pengumuman</a>
+  <a href="#jurusan">Jurusan</a>
+  <a href="#ppdb">PPDB</a>
+  <a href="#erapor">E-Rapor</a>
+  <a href="#guru">Guru</a>
+  <a href="#download">Download</a>
+  <a href="#galeri">Galeri</a>
+  <a href="#video">Video</a>
+  <a href="#maps">Maps</a>
+</nav>
+
+<!-- PROFIL -->
+<section id="profil">
+<div class="card">
+<h2>Profil Sekolah</h2>
+<p>
+SMKS Muhammadiyah 15 Sinunukan merupakan Sekolah Menengah Kejuruan
+di bawah naungan Persyarikatan Muhammadiyah yang berkomitmen
+menyelenggarakan pendidikan berkualitas, berlandaskan nilai Islam,
+serta menyiapkan lulusan siap kerja.
+</p>
+
+<h3>Visi</h3>
+<p>Terwujudnya lulusan yang unggul, Islami, mandiri, dan berdaya saing.</p>
+
+<h3>Misi</h3>
+<ul>
+<li>Menyelenggarakan pendidikan kejuruan berbasis kompetensi.</li>
+<li>Menanamkan nilai Islam dan Kemuhammadiyahan.</li>
+<li>Membentuk karakter disiplin dan bertanggung jawab.</li>
+<li>Menyiapkan lulusan siap kerja dan berwirausaha.</li>
+</ul>
+</div>
+</section>
+
+<!-- PENGUMUMAN -->
+<section id="pengumuman">
+<div class="card">
+<h2>📢 Pengumuman</h2>
+<ul>
+<li>PPDB Tahun Ajaran 2025/2026 telah dibuka.</li>
+<li>Pelaksanaan Ujian Akhir Semester Genap.</li>
+<li>Pembagian Rapor Semester Genap.</li>
+</ul>
+</div>
+</section>
+
+<!-- JURUSAN -->
+<section id="jurusan">
+<div class="card">
+<h2>Kompetensi Keahlian</h2>
+<h3>Akuntansi dan Keuangan Lembaga (AKL)</h3>
+<p>
+Program keahlian yang membekali peserta didik dengan kemampuan
+pencatatan keuangan, pengelolaan administrasi keuangan,
+dan penyusunan laporan keuangan.
+</p>
+</div>
+</section>
+
+<!-- PPDB -->
+<section id="ppdb">
+<div class="card">
+<h2>📝 PPDB Online</h2>
+<p>
+Pendaftaran Peserta Didik Baru dilakukan secara online.
+</p>
+<a class="btn" href="#">Daftar PPDB</a>
+</div>
+</section>
+
+<!-- ERAPOR -->
+<section id="erapor">
+<div class="card">
+<h2>📘 E-Rapor</h2>
+<p>Layanan informasi hasil belajar peserta didik.</p>
+<a class="btn" href="https://rapormerdeka.com/login/" target="_blank">
+Login E-Rapor
+</a>
+</div>
+</section>
+
+<!-- GURU -->
+<section id="guru">
+<div class="card">
+<h2>👨‍🏫 Guru dan Tenaga Kependidikan</h2>
+
+<div class="guru-grid">
+<div class="guru-card">
+<img src="https://via.placeholder.com/100">
+<h4>Kepala Sekolah</h4>
+<p>(Isi Nama)</p>
+</div>
+
+<div class="guru-card">
+<img src="https://via.placeholder.com/100">
+<h4>Guru AKL</h4>
+<p>(Isi Nama)</p>
+</div>
+
+<div class="guru-card">
+<img src="https://via.placeholder.com/100">
+<h4>Guru Umum</h4>
+<p>(Isi Nama)</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download">
+<div class="card">
+<h2>📂 Download</h2>
+<ul>
+<li><a href="#">📄 Brosur PPDB</a></li>
+<li><a href="#">📘 Kalender Akademik</a></li>
+<li><a href="#">📑 Kurikulum Sekolah</a></li>
+<li><a href="#">📃 Tata Tertib Sekolah</a></li>
+</ul>
+</div>
+</section>
+
+<!-- GALERI -->
+<section id="galeri">
+<div class="card">
+<h2>📸 Galeri</h2>
+<img src="https://via.placeholder.com/1200x400" width="100%">
+</div>
+</section>
+
+<!-- VIDEO -->
+<section id="video">
+<div class="card">
+<h2>🎥 Video Sekolah</h2>
+<iframe height="400" src="https://www.youtube.com/embed/n5kdozro7hk" allowfullscreen></iframe>
+</div>
+</section>
+
+<!-- MAPS -->
+<section id="maps">
+<div class="card">
+<h2>📍 Lokasi Sekolah</h2>
+<iframe height="350" src="https://www.google.com/maps?q=Sinunukan&output=embed"></iframe>
+</div>
+</section>
+
+<footer>
+<p>© 2025 SMKS Muhammadiyah 15 Sinunukan</p>
+</footer>
+
+<script>
+document.getElementById("tanggal").innerHTML =
+new Date().toLocaleDateString("id-ID",
+{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+</script>
+
+</body>
+</html>
